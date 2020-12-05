@@ -1,15 +1,26 @@
 # Contributing
 
-If you want to contribute to this project, here is a quick guide:
+First thank you for thinking to contribute to this project!
+
+## Adding a new map in this repository
+
+### Quick Guide
+
 1. Fork the repository
-2. Develop your code changes
+2. Create a new package for you map
 3. Commit your changes
 4. Push to your fork
 5. Submit a pull request
 
-## Adding a new map
+### Using CLI tool
 
-### SVG file
+* `npm run add`
+* Answer the questions
+* Complete the map
+
+### Manually
+
+#### SVG file
 * Create a new folder `/packages/[new-map]/` and a new file `/packages/[new-map]/[new-map].svg` in kebab-case. _For example: `/packages/new-zealand/new-zealand.svg`_
 * Use tab indentation
 * Use only `<svg>` and `<path>` tags (no doctype, external stylesheet, comment...). __Other tags will be ignored__
@@ -44,7 +55,7 @@ Here is a simplified example of `new-zealand.svg`:
 </svg>
 ```
 
-### Package file
+#### Package file
 * Create a new `/packages/[new-map]/package.json` file to describe the npm package to publish:
 ```json
 {
@@ -70,11 +81,11 @@ Here is a simplified example of `new-zealand.svg`:
 
 ```
 
-### JS file
+#### JS file
 * Generate the JS file running the `npm run build` command
 * The `/packages/[new-map]/index.js` file should be generated. Otherwise it means the SVG file is not valid
 
-### Documentation
+#### Documentation
 * Add a `/packages/[new-map]/LICENSE.md` file with the license of the map ([Creative Commons Markdown](https://github.com/idleberg/Creative-Commons-Markdown))
 
 * Create a new `/packages/[new-map]/README.md` file to:
@@ -87,5 +98,18 @@ Here is a simplified example of `new-zealand.svg`:
   * using alphabetical order
   * linking to the package folder `/packages/[new-map]`
 
+## Adding a map from an external respository
+
+### Creation
+You're free to create the maps as you want. I recommend to use this CLI tool.
+TIPS:
+* Find a simple map with compatible SVG code
+* Pay attention to the license
+* Give credits and information about the original map
+
+### Linking
+
+
+
 ## Reporting a bug
-[Open an issue](https://github.com/VictorCazanave/svg-maps/issues/new).
+If you see any incorrect or incomplete data, please [open an issue](https://github.com/VictorCazanave/svg-maps/issues/new).
